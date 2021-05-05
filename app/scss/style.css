@@ -24,7 +24,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   z-index: -999;
-  background-image: url(/images/background.svg);
+  background-image: url(/images/background.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
