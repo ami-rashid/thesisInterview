@@ -34,8 +34,18 @@ body {
     display: flex;
     z-index: -999;
     background-color: $dark;
-    opacity: 0.2;
+    opacity: 0.3;
 }
+
+@media only screen and (max-width: 1000px) {
+    .background {
+        height: 135vh;
+    }
+    
+    .overlay {
+       
+    }
+  }
 
 .nav-container{
     display: flex;
@@ -43,17 +53,19 @@ body {
     max-width: 140rem;
     margin: 0 auto;
     padding: 0 1.5rem;
-    
 }
 
 .nav-logo {
     color: $white;
     text-decoration: none;
     font-size: 3rem;
+    font-weight: bold;
 }
 
 .nav-list {
+    width: 50%;
     display: flex;
+    justify-content: space-evenly;
     list-style: none;
 }
 
@@ -63,38 +75,146 @@ body {
     text-decoration: none;
 }
 
+.nav-item a{
+    &:hover {
+        color: $skyblue;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-list {
+        flex-direction: column;
+    }
+  }
+
 .hero {
     width: 100%;
-    position: relative;
+    height: 80vh;
     display: flex;
-    align-items: center;
 }
 
 .content{
     width: 100%;
     display: flex;
     align-items: center;
-    position: relative;
-    z-index: 10;
+    justify-content: space-evenly;
 }
 
+@media only screen and (max-width: 1000px) {
+    .content {
+        flex-direction: column;
+    }
+  }
 
+.text {
+    width: 40rem;;
+}
+
+.motto {
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+.cta-text {
+    font-size: 1.8rem;
+    font-weight: bold;
+    opacity: 0.8;
+}
+
+@media only screen and (max-width: 1000px) {
+    .text {
+        width: 20rem;
+    }
+
+    .motto {
+        font-size: 3rem;
+    }
+
+    .cta-text {
+        font-size: 1rem;
+        font-weight: bold;
+        opacity: 0.8;
+    }
+  }
+  
 .sign-up-form {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    
+    & h5 {
+        color: $gray;
+    }
 }
 
 .input-form {
+    width: 100%;
     display: flex;
     flex-direction: column;
+    border-radius: 5px;
+    border: solid $gray 0.08rem;
 }
-.sign-up-form input {
-    border: solid $gray 0.1rem;
+.sign-up-form .input-field {
+    width: 30rem;
+    height: 2rem;
+    padding: 2rem;
+    border: solid $gray 0.05rem;
+    color: $white;
+    font-size: 1rem;
+    background: transparent;
 }
+
+.sign-up-btn {
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    color: $white;
+    background: $skyblue;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $lightblue;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .sign-up-form {
+        width: 100%;
+    }
+
+    .sign-up-form .input-field {
+        width: auto;
+    }
+  }
 
 .footer {
     position: absolute;
     bottom: 0;
-    width: 100&;
-    height: 2.5rem;
+    width: 99%;
+    height: 4rem;
+    overflow: hidden;
 }
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 8rem;
+}
+
+@media only screen and (max-width: 1000px) {
+    .footer {
+        position: relative;
+        top: 0;
+        height: auto;
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+  }

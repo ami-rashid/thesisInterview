@@ -40,7 +40,13 @@ body {
   display: flex;
   z-index: -999;
   background-color: #1B1B1B;
-  opacity: 0.2;
+  opacity: 0.3;
+}
+
+@media only screen and (max-width: 1000px) {
+  .background {
+    height: 135vh;
+  }
 }
 
 .nav-container {
@@ -59,12 +65,17 @@ body {
   color: #FFFFFF;
   text-decoration: none;
   font-size: 3rem;
+  font-weight: bold;
 }
 
 .nav-list {
+  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   list-style: none;
 }
 
@@ -73,15 +84,34 @@ body {
   text-decoration: none;
 }
 
+.nav-item a:hover {
+  color: #2C99ED;
+}
+
+@media only screen and (max-width: 1000px) {
+  .nav-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .hero {
   width: 100%;
-  position: relative;
+  height: 80vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .content {
@@ -92,8 +122,47 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
-  z-index: 10;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 1000px) {
+  .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.text {
+  width: 40rem;
+}
+
+.motto {
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.cta-text {
+  font-size: 1.8rem;
+  font-weight: bold;
+  opacity: 0.8;
+}
+
+@media only screen and (max-width: 1000px) {
+  .text {
+    width: 20rem;
+  }
+  .motto {
+    font-size: 3rem;
+  }
+  .cta-text {
+    font-size: 1rem;
+    font-weight: bold;
+    opacity: 0.8;
+  }
 }
 
 .sign-up-form {
@@ -104,9 +173,17 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sign-up-form h5 {
+  color: #9B9B9B;
 }
 
 .input-form {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -114,16 +191,72 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  border-radius: 5px;
+  border: solid #9B9B9B 0.08rem;
 }
 
-.sign-up-form input {
-  border: solid #9B9B9B 0.1rem;
+.sign-up-form .input-field {
+  width: 30rem;
+  height: 2rem;
+  padding: 2rem;
+  border: solid #9B9B9B 0.05rem;
+  color: #FFFFFF;
+  font-size: 1rem;
+  background: transparent;
+}
+
+.sign-up-btn {
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  color: #FFFFFF;
+  background: #2C99ED;
+  cursor: pointer;
+}
+
+.sign-up-btn:hover {
+  background-color: #88c6f5;
+}
+
+@media only screen and (max-width: 1000px) {
+  .sign-up-form {
+    width: 100%;
+  }
+  .sign-up-form .input-field {
+    width: auto;
+  }
 }
 
 .footer {
   position: absolute;
   bottom: 0;
-  width: 100 .footer;
-  height: 2.5rem;
+  width: 99%;
+  height: 4rem;
+  overflow: hidden;
+}
+
+.footer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  padding-left: 8rem;
+}
+
+@media only screen and (max-width: 1000px) {
+  .footer {
+    position: relative;
+    top: 0;
+    height: auto;
+  }
+  .footer-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 /*# sourceMappingURL=style.css.map */
