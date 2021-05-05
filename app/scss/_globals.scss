@@ -8,5 +8,93 @@ html {
 }
 
 body {
-    background-color: $skyblue;
+    font-family: 'Roboto', sans-serif;
+    color: $white;
+}
+
+.background {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    z-index: -999;
+    background-image: url(/images/background.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.overlay {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    z-index: -999;
+    background-color: $dark;
+    opacity: 0.2;
+}
+
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    max-width: 140rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    
+}
+
+.nav-logo {
+    color: $white;
+    text-decoration: none;
+    font-size: 3rem;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+}
+
+
+.nav-link {
+    color: $white;
+    text-decoration: none;
+}
+
+.hero {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.content{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+
+.sign-up-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-form {
+    display: flex;
+    flex-direction: column;
+}
+.sign-up-form input {
+    border: solid $gray 0.1rem;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100&;
+    height: 2.5rem;
 }
